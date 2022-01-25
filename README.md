@@ -1,9 +1,10 @@
-#TrackBin Patrones de movimiento
-##-Instructivo (en curso)
+# TrackBin Patrones de movimiento
 
-'''
-1- Filtrado de datos
-2- Cortes de Grafica
-3- InterpoLinealint1
-4- Red Neuronal Binaria
-'''
+
+
+### Orden de programas
+
+- Filtrado de datos
+- Cortes de Grafica
+- InterpoLinealint1
+- Red Neuronal Binaria
