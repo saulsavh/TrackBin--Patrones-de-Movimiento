@@ -37,7 +37,7 @@ Por ultimo se planteó el diseño de una **red neuronal binaria** en Python para
 
 ## Instrucciones de uso
 Para utilizar la serie de programas es necesario ingresar la información correspondiente al escenario y el conductor a la carpeta “Datos”, donde únicamente deben ir “dataset_gps_mpu_left.csv”, ”dataset_gps.csv” y “dataset_labels.csv”.
-Esta información puede encontrarse en el link de la base de datos [PSV-Database](https://www.kaggle.com/jefmenegazzo/pvs-passive-vehicular-sensors-datasets)  o también puede encontrarse ordenado por escenario y conductor en la ruta “Datos [Servicio\Rutas\Data-TrackBin](Servicio\Rutas\Data-TrackBin)” del repositorio.
+Esta información puede encontrarse en el link de la base de datos [PSV-Database](https://www.kaggle.com/jefmenegazzo/pvs-passive-vehicular-sensors-datasets)  o también puede encontrarse ordenado por escenario y conductor en la ruta “[DatosServicio\Rutas\Data-TrackBin](Datos Servicio)” del repositorio.
 
 ### Orden de programas
 
