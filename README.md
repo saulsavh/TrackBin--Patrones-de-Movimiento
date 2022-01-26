@@ -1,6 +1,5 @@
 # TrackBin Patrones de movimiento
-***
-# Reporte final 
+## Reporte final 
 
 Se dio inicio al proyecto con la lectura del Paper de “ [TrajGAIL: Generating urban vehicle trajectories using generative adversarial imitation learning](https://www.sciencedirect.com/science/article/abs/pii/S0968090X21001121?via%3Dihub "Paper del repositorio")" ya que se usaría su proyecto como base para comenzar a analizar las rutas de vehículos [TrajGAIL](https://github.com/benchoi93/TrajGAIL "Repositorio").
 
