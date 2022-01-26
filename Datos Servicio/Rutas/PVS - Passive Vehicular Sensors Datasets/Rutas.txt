@@ -1,0 +1,3 @@
+https://www.kaggle.com/jefmenegazzo/pvs-passive-vehicular-sensors-datasets
+
+GPS data, including latitude, longitude, altitude, speed, accuracy, etc
