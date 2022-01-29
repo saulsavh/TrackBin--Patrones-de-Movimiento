@@ -11,6 +11,9 @@ dataset = dataset["timestamp"]
 dl = pd.merge(dataset, label, right_index=True, left_index=True)
 dl.to_csv("Resultados\LabelTimestamp.csv")
 
+#en caso de tener dataset con el timestamp, usar esta linea de codigo
+#dl = pd.read_csv("Datos\LabelTimestamp.csv")
+
 # importo el data del gps
 gps = pd.read_csv("Datos\dataset_gps.csv")
 gps = gps[["timestamp", "latitude", "longitude", "speed_meters_per_second", "distance_meters", "elapsed_time_seconds"]]
