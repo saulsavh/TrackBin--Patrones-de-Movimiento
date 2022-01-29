@@ -1,7 +1,7 @@
 # TrackBin Patrones de movimiento :oncoming_automobile:
 ## Reporte final 
 
-Se dio inicio al proyecto con la lectura del Paper de “ [TrajGAIL: Generating urban vehicle trajectories using generative adversarial imitation learning](https://www.sciencedirect.com/science/article/abs/pii/S0968090X21001121?via%3Dihub "Paper del repositorio")" ya que se usaría su proyecto como base para comenzar a analizar las rutas de vehículos [TrajGAIL](https://github.com/benchoi93/TrajGAIL "Repositorio").
+Se dio inicio al proyecto con la lectura del Paper de “ [TrajGAIL: Generating urban vehicle trajectories using generative adversarial imitation learning](https://www.sciencedirect.com/science/article/abs/pii/S0968090X21001121?via%3Dihub "Paper del repositorio")" ya que se usaría su proyecto como base para comenzar a analizar las rutas de vehículos [TrajGAIL](https://github.com/benchoi93/TrajGAIL "Repositorio").(https://github.com/benchoi93/TrajGAIL)
 
 Como primer trabajo se solicitó el descargar el repositorio de GitHub e intentar ejecutarlo en la pc para evaluar cómo funcionaba, pero para ello salieron errores donde al final el Dr. Ramón Aranda se comunicó directamente al propietario del repositorio comentándole del error.
 
@@ -37,7 +37,7 @@ Por ultimo se planteó el diseño de una **red neuronal binaria** en Python para
 
 ## Instrucciones de uso
 Para utilizar la serie de programas es necesario ingresar la información correspondiente al escenario y el conductor a la carpeta “Datos”, donde únicamente deben ir “dataset_gps_mpu_left.csv”, ”dataset_gps.csv” y “dataset_labels.csv”.
-Esta información puede encontrarse en el link de la base de datos [PSV-Database](https://www.kaggle.com/jefmenegazzo/pvs-passive-vehicular-sensors-datasets)  o también puede encontrarse ordenado por escenario y conductor en la ruta “[DatosServicio\Rutas\Data-TrackBin](DatosServicio\Rutas\Data-TrackBin)” del repositorio.
+Esta información puede encontrarse en el link de la base de datos [PSV-Database](https://www.kaggle.com/jefmenegazzo/pvs-passive-vehicular-sensors-datasets)  o también puede encontrarse ordenado por escenario y conductor en la ruta “DatosServicio\Rutas\Data-TrackBin” del repositorio.
 
 ### Orden de programas
 
@@ -46,6 +46,39 @@ Esta información puede encontrarse en el link de la base de datos [PSV-Database
 - InterpoLinealint1
 - Red Neuronal Binaria
 
-El resultado aparecera en la carpeta "Resultados".
+
+
+
+### Librerias necesarias
+
+- numpy
+- pandas
+- matplotlib
+- scipy
+- tensorflow
+
+-Preferible usar python 3.8.8
+
+
+
+## Rutas de archivos
+
+
+Para el filtrado de archivos se requiere de tres archivos principales "**dataset_gps_mpu_left.csv**, **dataset_labels.csv**, **dataset_gps.csv**, de los cuales "***dataset_gps_mpu_left.csv***" solo es necesario para proporcionar las etiquetas "*Timestamp*" para el dataset **dataset_labels.csv** y así generar el nuevo dataset **LabelTimestamp.csv**, en caso de que se tenga un dataset con los datos necesarios("timestamp","no_speed_bump", "speed_bump_asphalt", "speed_bump_cobblestone"), use la línea #15 del código y comente la línea 6 a la 12.
+
+Para el segundo caso, **el archivo se carga en la línea #15 con el nombre "LabelTimestamp.csv"**
+
+````
+15 dl = pd.read_csv("Datos\LabelTimestamp.csv")
+````
+
+En caso de que se tengan los 2 archivos por separado y sea necesario realizar el primero proceso, en la línea #6 y #7 se encuentran las rutas para abrir "**dataset_gps_mpu_left.csv**" y "**dataset_labels.csv**" respectivamente
+
+
+````
+6 dataset = pd.read_csv("Datos\dataset_gps_mpu_left.csv")
+7 label = pd.read_csv("Datos\dataset_labels.csv")
+````
+Como resultado guardara un solo archivo con toda la información con la misma cantidad de datos que “**dataset_gps.csv**” llamado “**LabelGPS.csv**”
 
 
